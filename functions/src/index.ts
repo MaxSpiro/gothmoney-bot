@@ -4,6 +4,7 @@ import {getRandomEmojis, music} from './emojis'
 import {getAllSongIds, getRandomSnippetFromLyrics, getRandomArrayElement, getTitleArtistFromId} from './genius'
 import {TitleArtist, ArtistSearch} from './types/genius-types'
 
+
 const artists: ArtistSearch[] = [
   {artistName: 'yung lean', nSongs: 100},
   {artistName: 'bladee', nSongs: 100},
@@ -12,7 +13,7 @@ const artists: ArtistSearch[] = [
 ]
 const linesPerLyric = 2
 
-exports.sendTweet = functions.pubsub.schedule('0 */2 * * *').onRun(main)
+exports.sendTweet = functions.pubsub.schedule('0 */6 * * *').onRun(main)
 
 async function main() {
   try {

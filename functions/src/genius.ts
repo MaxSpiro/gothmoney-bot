@@ -1,8 +1,9 @@
 import {getLyrics} from 'genius-lyrics-api'
 import axios from 'axios'
 import {Song, TitleArtist, ArtistSearch} from './types/genius-types'
+import {GENIUS_API_KEY} from './keys.json'
 
-const geniusApiKey = ''
+const geniusApiKey = GENIUS_API_KEY
 
 
 const getRandomSnippetFromLyrics = async (songId: number, numLines: number): Promise<string | undefined> => {
