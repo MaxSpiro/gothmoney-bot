@@ -1,0 +1,8 @@
+diff --git a/node_modules/genius-lyrics-api/index.d.ts b/node_modules/genius-lyrics-api/index.d.ts
+new file mode 100644
+index 0000000..3fcf5de
+--- /dev/null
++++ b/node_modules/genius-lyrics-api/index.d.ts
+@@ -0,0 +1 @@
++declare module 'genius-lyrics-api'
+\ No newline at end of file

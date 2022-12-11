@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@types/node": "18.11.13",
@@ -20,6 +21,8 @@
     "ioredis": "^5.2.4",
     "next": "13.0.6",
     "node-emoji": "^1.11.0",
+    "patch-package": "^6.5.0",
+    "postinstall-postinstall": "^2.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "twitter-api-v2": "^1.12.9",
