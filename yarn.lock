@@ -17,6 +17,11 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
+"@deno/shim-crypto@~0.3.0":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@deno/shim-crypto/-/shim-crypto-0.3.1.tgz#416155b2b6f9ad728f80ebcb422c803efc1023c2"
+  integrity sha512-ed4pNnfur6UbASEgF34gVxR9p7Mc3qF+Ygbmjiil8ws5IhNFhPDFy5vE5hQAUA9JmVsSxXPcVLM5Rf8LOZqQ5Q==
+
 "@eslint/eslintrc@^1.3.3":
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.3.3.tgz#2b044ab39fdfa75b4688184f9e573ce3c5b0ff95"
@@ -252,6 +257,13 @@
   dependencies:
     "@typescript-eslint/types" "5.46.0"
     eslint-visitor-keys "^3.3.0"
+
+"@upstash/qstash@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@upstash/qstash/-/qstash-0.3.1.tgz#20407cc7c0c7757db0b17a2009b5d0d9254c9a4c"
+  integrity sha512-aIBB/+iVhbNCyy5UQ1o9sCNczt+y+ytCNQPvpTln4o+TBl1GMQ/jltJmNAX0FkDed6kAxY0KowbOqoZks/fK7Q==
+  dependencies:
+    "@deno/shim-crypto" "~0.3.0"
 
 acorn-jsx@^5.3.2:
   version "5.3.2"

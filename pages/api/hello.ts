@@ -1,13 +1,17 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { verifySignature } from "@upstash/qstash/nextjs";
+import type { NextApiRequest, NextApiResponse } from "next";
 
-type Data = {
-  name: string
+async function handler(req: NextApiRequest, res: NextApiResponse) {
+  console.log("If this is printed, the signature has already been verified");
+
+  // do stuff
+  res.status(200).end();
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'John Doe' })
-}
+export default verifySignature(handler);
+
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
