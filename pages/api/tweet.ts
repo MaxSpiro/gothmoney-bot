@@ -30,15 +30,12 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   while (!tweetMaterial) {
     tweetMaterial = await geniusService.generateSnippet(allSongIds);
   }
-  // const { id, text } = await twitterService.sendTweet(tweetMaterial);
+  const { id, text } = await twitterService.sendTweet(tweetMaterial);
 
-  // res.status(200).json({ id, text });
-  console.log(tweetMaterial);
-  res.status(200).send(tweetMaterial);
+  res.status(200).json({ id, text });
 }
 
-// export default verifySignature(handler);
-export default handler;
+export default verifySignature(handler);
 
 export const config = {
   api: {
