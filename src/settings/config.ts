@@ -7,4 +7,4 @@ export const config = {
   REDIS_URL: process.env.REDIS_URL || "",
 };
 
-export const CACHE_INTERVAL = 60 * 60 * 24 * 1000; // 7 days
+export const CACHE_INTERVAL = 60 * 60 * 24 * 1000 * 7; // 7 days
