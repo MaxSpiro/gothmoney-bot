@@ -26,12 +26,16 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     allSongIds = JSON.parse(redisCache.allSongIds);
   }
 
+  console.log("redis cache", redisCache);
+
   let tweetMaterial: string | undefined;
   while (!tweetMaterial) {
     tweetMaterial = await geniusService.generateSnippet(allSongIds);
+    console.log(tweetMaterial);
   }
   const { id, text } = await twitterService.sendTweet(tweetMaterial);
 
+  console.log("tweeted", id, text);
   res.status(200).json({ id, text });
 }
 
